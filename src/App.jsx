@@ -1,7 +1,7 @@
 import { useState, Suspense } from 'react'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Environment, OrbitControls } from '@react-three/drei'
 import Earth from '../public/Earth'
 
 function App() {
@@ -10,11 +10,12 @@ function App() {
   return (
     <>
       <Canvas>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={1.5} />
         <Suspense fallback={null}>
           <Earth />
           <OrbitControls />
         </Suspense>
+        <Environment preset="sunset" />
       </Canvas>
     </>
   )

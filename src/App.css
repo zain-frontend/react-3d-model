@@ -1,3 +1,6 @@
 canvas {
   height: 100vh;
 }
+body {
+  background-color: slategray;
+}
